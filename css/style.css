@@ -7,7 +7,7 @@ body {
 }
 .nota::before {
   margin-bottom: 15px;
-  content: "Nota:";
+  content: "Note:";
   display: block;
   text-align: center;
   font-size: 16px;

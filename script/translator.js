@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'carRental': 'Noleggio Auto',
             'searchHeader': 'Cerca il Deep Link di Booking (Spagna e Isole)',
             'inputPlaceholder': 'Inserisci il termine di ricerca...',
-            'searchNotice': 'È normale che la ricerca richieda alcuni secondi per elaborare un grande numero di strutture. In Spagna, ad esempio, ci sono 206.775 strutture.',
+            'searchNotice': 'Per favore, attendi il feedback prima di cercare l\'hotel desiderato. Potrebbe richiedere un paio di secondi per elaborare i 206.775 hotel in Spagna.',
             'searchCNotice': 'I link puntano alle homepage delle rispettive piattaforme di noleggio auto.',
             'searchCiNotice': 'I link puntano alla homepage di Civitatis.',
             'searchGNotice': 'I link puntano alla homepage di GetYourGuide.',
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'carRental': 'Alquiler de Coches',
             'searchHeader': 'Busca tu Deep Link de Booking (España y Islas)',
             'inputPlaceholder': 'Introduce el término de búsqueda...',
-            'searchNotice': 'Es normal que la búsqueda tarde unos segundos en procesar un gran número de estructuras. En España, por ejemplo, hay 206.775 estructuras.',
+            'searchNotice': 'Por favor, espera el feedback antes de buscar el hotel deseado. Puede tardar unos segundos en procesar los 206.775 hoteles en España.',
             'searchCNotice': 'Los enlaces conducen a las páginas de inicio de las respectivas plataformas de alquiler de coches.',
             'searchCiNotice': 'Los enlaces apuntan a la página de inicio de Civitatis.',
             'searchGNotice': 'Los enlaces apuntan a la página de inicio de GetYourGuide.',
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'carRental': 'Car Rental',
             'searchHeader': 'Search for your Booking Deep Link (Spain and Islands)',
             'inputPlaceholder': 'Enter search term...',
-            'searchNotice': 'It\'s normal for the search to take a few seconds to process a large number of listings. In Spain, for example, there are 206,775 listings.',
+            'searchNotice': 'Please wait for the feedback before searching for the desired hotel. It may take a few seconds to process the 206,775 hotels in Spain.',
             'searchCNotice': 'The links lead to the homepages of the respective car rental platforms.',
             'searchCiNotice': 'The links point to Civitatis homepage.',
             'searchGNotice': 'The links point to GetYourGuide homepage.',
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'carRental': 'Location de Voitures',
             'searchHeader': 'Cherchez votre Deep Link de Booking (Espagne et Îles)',
             'inputPlaceholder': 'Entrez le terme de recherche...',
-            'searchNotice': 'Il est normal que la recherche prenne quelques secondes pour traiter un grand nombre de structures. En Espagne, par exemple, il y a 206 775 structures.',
+            'searchNotice': 'Veuillez patienter avant de rechercher l\'hôtel désiré. Il peut prendre quelques secondes pour traiter les 206 775 hôtels en Espagne.',
             'searchCNotice': 'Les liens mènent aux pages d\'accueil des plateformes de location de voitures respectives.',
             'searchCiNotice': 'Les liens pointent vers la page d\'accueil de Civitatis.',
             'searchGNotice': 'Les liens pointent vers la page d\'accueil de GetYourGuide.',
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var searchNotice = document.getElementById('searchNotice');
         if (searchNotice) {
-            searchNotice.querySelector('.nota').textContent = translations[selectedLanguage]['searchNotice'];
+            searchNotice.querySelector('.HotelsNote').textContent = translations[selectedLanguage]['searchNotice'];
         }
 
         var searchINotice = document.getElementById('searchINotice');

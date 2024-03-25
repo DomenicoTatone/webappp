@@ -84,6 +84,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (typeof updateLinks === "function") {
                     updateLinks();
                 }
+                // Aggiungi condizione per mostrare il messaggio solo per gli hotels
+                if (url.includes('hotel_page_links')) {
+                    mostraMessaggioGlobalmente('HotelsLoaded');
+                }
             };
         } else {
             console.log(`Script ${url} già presente. Caricamento evitato.`);
@@ -92,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
+    
 
     document.querySelectorAll('.flag-icon').forEach(function(flag) {
         flag.addEventListener('click', function() {

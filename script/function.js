@@ -3,25 +3,29 @@ const translations = {
         DeeplinkCopied: 'Deep Link copiato negli appunti!',
         copyError: 'Errore nella copia del link.',
         validGetYourGuideURL: 'Per favore, inserisci un URL valido di GetYourGuide.',
-        validCivitatisURL: 'Per favore, inserisci un URL valido di Civitatis.'
+        validCivitatisURL: 'Per favore, inserisci un URL valido di Civitatis.',
+        HotelsLoaded: 'Lista Hotels caricata correttamente!'
     },
     es: {
         DeeplinkCopied: '¡Deep Link copiado al portapapeles!',
         copyError: 'Error al copiar el enlace.',
         validGetYourGuideURL: 'Por favor, introduce una URL válida de GetYourGuide.',
-        validCivitatisURL: 'Por favor, introduce una URL válida de Civitatis.'
+        validCivitatisURL: 'Por favor, introduce una URL válida de Civitatis.',
+        HotelsLoaded: 'Lista de hoteles cargada correctamente!'
     },
     en: {
         DeeplinkCopied: 'Deep Link copied to clipboard!',
         copyError: 'Error copying the link.',
         validGetYourGuideURL: 'Please, enter a valid GetYourGuide URL.',
-        validCivitatisURL: 'Please, enter a valid Civitatis URL.'
+        validCivitatisURL: 'Please, enter a valid Civitatis URL.',
+        HotelsLoaded: 'List of hotels loaded successfully!'
     },
     fr: {
         DeeplinkCopied: 'Deep Link copié dans le presse-papiers !',
         copyError: 'Erreur lors de la copie du lien.',
         validGetYourGuideURL: 'Veuillez saisir une URL valide de GetYourGuide.',
-        validCivitatisURL: 'Veuillez saisir une URL valide de Civitatis.'
+        validCivitatisURL: 'Veuillez saisir une URL valide de Civitatis.',
+        HotelsLoaded: 'Liste des hôtels chargée avec succès !'
     }
 };
 
