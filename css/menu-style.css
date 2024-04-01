@@ -116,6 +116,7 @@ nav {
 
   .menu-items.active { 
     display: flex; 
+    z-index: 9999;
   }
 
   .hamburger-menu {
