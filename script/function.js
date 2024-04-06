@@ -96,3 +96,56 @@ function mostraMessaggioDiErrore(chiaveMessaggio) {
         }, 500); // Corrisponde alla durata dell'animazione di opacità
     }, 4000);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOMContentLoaded"); // Verifica che l'evento sia catturato
+    mostraMessaggioNovita('Nuovo programma attivo su Isola di Minorca ES - 3349567');
+});
+
+function mostraMessaggioNovita(testoMessaggio) {
+    // Verifica se il messaggio è già stato mostrato
+    if (localStorage.getItem('messaggioNovitaVisto') === 'true') {
+        return; // Se il messaggio è stato già visto, non fare nulla
+    }
+
+    const novitaBox = document.createElement('div');
+    const icona = document.createElement('i');
+    icona.className = 'fa fa-star';
+    icona.style.marginRight = '10px';
+
+    novitaBox.appendChild(icona);
+    novitaBox.appendChild(document.createTextNode(testoMessaggio));
+
+    novitaBox.style.display = 'flex';
+    novitaBox.style.alignItems = 'center';
+    novitaBox.style.position = 'fixed';
+    novitaBox.style.bottom = '20px';
+    novitaBox.style.left = '20px';
+    novitaBox.style.backgroundColor = '#17a2b8';
+    novitaBox.style.color = 'white';
+    novitaBox.style.padding = '10px 20px';
+    novitaBox.style.borderRadius = '5px';
+    novitaBox.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+    novitaBox.style.zIndex = '10000';
+    novitaBox.style.opacity = '0';
+    novitaBox.style.transition = 'opacity 0.5s, bottom 0.5s';
+
+    document.body.appendChild(novitaBox);
+
+    setTimeout(() => {
+        novitaBox.style.opacity = '1';
+        novitaBox.style.bottom = '30px';
+    }, 10);
+
+    setTimeout(() => {
+        novitaBox.style.opacity = '0';
+        novitaBox.style.bottom = '20px';
+        setTimeout(() => {
+            novitaBox.remove();
+            // Imposta un flag in localStorage per ricordare che il messaggio è stato mostrato
+            localStorage.setItem('messaggioNovitaVisto', 'true');
+        }, 500);
+    }, 5000);
+}
+
+
