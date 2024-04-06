@@ -98,53 +98,61 @@ function mostraMessaggioDiErrore(chiaveMessaggio) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOMContentLoaded"); // Verifica che l'evento sia catturato
-    mostraMessaggioNovita('Nuovo programma attivo su Isola di Minorca ES - 3349567');
+    console.log("DOMContentLoaded");
+    var testoMessaggio = 'Nuovo programma attivo su Isola di Minorca ES - 3349567'; // Esempio di messaggio
+    var idMessaggio = getIdMessaggio(testoMessaggio); // Ottieni l'ID (o hash) del messaggio
+
+    // Controlla se l'ID del messaggio è diverso da quello salvato (o se non c'è niente salvato)
+    if (localStorage.getItem('idUltimoMessaggioMostrato') !== idMessaggio) {
+        mostraMessaggioNovita(testoMessaggio);
+        localStorage.setItem('idUltimoMessaggioMostrato', idMessaggio); // Aggiorna l'ID del messaggio mostrato
+    }
 });
 
-function mostraMessaggioNovita(testoMessaggio) {
-    // Verifica se il messaggio è già stato mostrato
-    if (localStorage.getItem('messaggioNovitaVisto') === 'true') {
-        return; // Se il messaggio è stato già visto, non fare nulla
-    }
+function getIdMessaggio(testoMessaggio) {
+    // In questo esempio, usiamo semplicemente il testo del messaggio come "ID",
+    // ma potresti voler utilizzare una funzione di hashing per ottenere un valore più breve e univoco
+    return testoMessaggio;
+}
 
+function mostraMessaggioNovita(testoMessaggio) {
     const novitaBox = document.createElement('div');
-    const icona = document.createElement('i');
-    icona.className = 'fa fa-star';
+    const icona = document.createElement('i'); // Usa Font Awesome per l'icona
+    icona.className = 'fa fa-star'; // Icona stella per indicare "novità"
     icona.style.marginRight = '10px';
 
-    novitaBox.appendChild(icona);
-    novitaBox.appendChild(document.createTextNode(testoMessaggio));
+    novitaBox.appendChild(icona); // Aggiungi l'icona al box di novità
+    novitaBox.appendChild(document.createTextNode(testoMessaggio)); // Aggiungi il testo dopo l'icona
 
+    // Stili base per il messaggio di novità
     novitaBox.style.display = 'flex';
     novitaBox.style.alignItems = 'center';
     novitaBox.style.position = 'fixed';
-    novitaBox.style.bottom = '20px';
+    novitaBox.style.bottom = '20px'; // Posizionamento in basso per meno intrusività
     novitaBox.style.left = '20px';
-    novitaBox.style.backgroundColor = '#17a2b8';
+    novitaBox.style.backgroundColor = '#17a2b8'; // Colore blu-verde per un aspetto fresco
     novitaBox.style.color = 'white';
     novitaBox.style.padding = '10px 20px';
     novitaBox.style.borderRadius = '5px';
-    novitaBox.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+    novitaBox.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)'; // Ombra leggera per risaltare
     novitaBox.style.zIndex = '10000';
     novitaBox.style.opacity = '0';
-    novitaBox.style.transition = 'opacity 0.5s, bottom 0.5s';
+    novitaBox.style.transition = 'opacity 0.5s, bottom 0.5s'; // Animazione per opacità e posizione
 
     document.body.appendChild(novitaBox);
 
     setTimeout(() => {
         novitaBox.style.opacity = '1';
-        novitaBox.style.bottom = '30px';
+        novitaBox.style.bottom = '30px'; // Movimento leggero per attirare attenzione
     }, 10);
 
+    // Rimuovere il messaggio dopo 5 secondi con effetto di fade out
     setTimeout(() => {
         novitaBox.style.opacity = '0';
-        novitaBox.style.bottom = '20px';
+        novitaBox.style.bottom = '20px'; // Ritorna alla posizione originale per il fade out
         setTimeout(() => {
             novitaBox.remove();
-            // Imposta un flag in localStorage per ricordare che il messaggio è stato mostrato
-            localStorage.setItem('messaggioNovitaVisto', 'true');
-        }, 500);
+        }, 500); // Corrisponde alla durata dell'animazione di opacità
     }, 5000);
 }
 
