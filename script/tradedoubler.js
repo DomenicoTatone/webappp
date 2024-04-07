@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "Direct Ferries UK"
         ],
         "3349567": [
+            "My Tea Moments - Té e Infusiones Online"
         ]
     };
 
@@ -80,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "Direct Ferries UK": "http://clk.tradedoubler.com/click?p=324849&a=3349565"
         },
         "3349567": {
+            "My Tea Moments - Té e Infusiones Online": "https://clk.tradedoubler.com/click?p=357725&a=3349567"
         }
     };
 

@@ -71,6 +71,7 @@ nav {
   color: white;
   text-decoration: none;
   margin-right: 20px; 
+  white-space: nowrap;
 }
 
 .menu-items a:last-child {
