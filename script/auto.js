@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   const links = [
       { name: "Coches Menorca", urls: { it: "https://cochesmenorca.es/it/?agentId=3", es: "https://cochesmenorca.es/?agentId=3", en: "https://cochesmenorca.es/en/?agentId=3" } },
-      { name: "Menorca Rent", urls: { it: "https://www.menorcarent.com/it/?agentId=15", es: "https://www.menorcarent.com/es/?agentId=15", en: "https://www.menorcarent.com/?agentId=15", fr: "https://www.menorcarent.com/fr/?agentId=15" } },
+      { name: "Menorca Rent", urls: { it: "https://www.menorcarent.com/it/?agentId=15", es: "https://www.menorcarent.com/?agentId=15", en: "https://www.menorcarent.com/en/?agentId=15", fr: "https://www.menorcarent.com/fr/?agentId=15" } },
       { name: "Autos Xoroi", urls: { it: "http://www.alquilercochesmenorca.com/it/?link=ISOLADIMINORCA", es: "http://www.alquilercochesmenorca.com/es/?link=ISOLADIMINORCA", en: "http://www.alquilercochesmenorca.com/?link=ISOLADIMINORCA", fr: "http://www.alquilercochesmenorca.com/fr/?link=ISOLADIMINORCA" } },
       { name: "HIPER", urls: { it: "https://hiperrentacar.com/it/?colaborador=LO-0495108", es: "https://hiperrentacar.com/es/?colaborador=LO-0495108", en: "https://hiperrentacar.com/en/?colaborador=LO-0495108", fr: "https://hiperrentacar.com/fr/?colaborador=LO-0495108" } },
       { name: "Rentalcars", urls: { it: "https://www.rentalcars.com/it/?affiliateCode=latitudine983", es: "https://www.rentalcars.com/es/?affiliateCode=latitudine983", en: "https://www.rentalcars.com/en/?affiliateCode=latitudine983", fr: "https://www.rentalcars.com/fr/?affiliateCode=latitudine983" } }
