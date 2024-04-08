@@ -84,3 +84,174 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.option-non-selezionabile {
+  color: #999; /* Colore del testo più chiaro */
+}
+
+#inputTLink, #transformedLink {
+  font-family: Arial, sans-serif; /* Esempio di impostazione del font */
+  font-size: 16px; /* Dimensione del font */
+  color: #333; /* Colore del testo */
+}
+
+#linkTransformerContainer {
+  margin-top: 60px;
+  text-align: center;
+}
+
+#inputTLink {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#transformedLinkContainer {
+  display: none; /* Nascondi fino alla trasformazione del link */
+  margin-top: 10px;
+}
+
+/* Stili base per i bottoni */
+#transformButton, #copyTransformedLink, #openTransformedLink {
+  padding: 12px 12px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#transformButton:hover, #copyTransformedLink:hover, #openTransformedLink:hover {
+  background-color: #0056b3;
+}
+
+/* Miglioramenti generici per i selettori e bottoni */
+#transformButton, #copyTransformedLink, #openTransformedLink {
+  padding: 8px 12px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Stilizzazione del contenitore del link trasformato */
+#transformedLinkContainer {
+  margin-top: 20px; /* Distanza dal bottone di trasformazione */
+}
+
+#transformedLink {
+  margin-bottom: 10px; /* Distanza dai bottoni */
+  word-break: break-all; /* Assicura che il link non superi la larghezza del contenitore */
+  padding: 10px; /* Padding per migliorare la leggibilità */
+  background-color: #f8f9fa; /* Sfondo leggermente differente per distinguerlo */
+  border: 1px solid #ddd; /* Bordo sottile */
+  border-radius: 5px; /* Bordi arrotondati */
+}
+.program-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Stile per il contenitore del video */
+.gif-container {
+  text-align: center; /* Centra il video all'interno del contenitore */
+  margin: 40px auto; /* Aggiunge margine sopra e sotto e centra orizzontalmente */
+  max-width: 80%; /* Imposta una larghezza massima per il contenitore */
+  border-radius: 8px; /* Bordi arrotondati per un look più morbido e moderno */
+  overflow: hidden; /* Assicura che il video non sporga oltre i bordi arrotondati */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
+}
+
+/* Stile per rendere il video responsive */
+.responsive-video {
+  width: 100%; /* Assicura che il video si adatti alla larghezza del suo contenitore */
+  height: auto; /* Mantiene le proporzioni del video */
+}
+
+.gif-description {
+  color: #2f2d2d;
+  background-color: rgba(255, 255, 255, 0.8); /* Leggermente trasparente per leggibilità */
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px; /* Bordi arrotondati per un aspetto più morbido */
+  font-size: 16px; /* Dimensione del testo */
+  text-align: left; /* Allineamento testo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leggera ombra per profondità */
+  display: block; /* Assicura che la descrizione sia sempre visibile */
+}
+
+.highlight {
+  background-color: #ffff99; /* Colore di sfondo per evidenziare */
+  font-weight: bold;
+}
+
+.fake-link {
+  color: #0000EE; /* Colore tipico dei link */
+  text-decoration: underline; /* Sottolineatura tipica dei link */
+  cursor: pointer; /* Cambia il cursore in una 'manina' come per i link */
+}
+
+/* Opzionalmente, puoi aggiungere un effetto al passaggio del mouse */
+.fake-link:hover {
+  color: #551A8B; /* Colore tipico dei link al passaggio del mouse */
+}
+
+@media (max-width: 768px) {
+  .gif-description {
+      font-size: 14px; /* Riduci la dimensione del testo su dispositivi mobili */
+      padding: 10px;
+  }
+}
+
+.button-custom {
+  font-weight: 600; /* Testo più spesso per maggiore leggibilità */
+  color: #ffffff; /* Colore del testo bianco */
+  background-color: #007bff; /* Colore di sfondo blu */
+  border: none; /* Nessun bordo */
+  border-radius: 5px; /* Angoli arrotondati */
+  padding: 10px 20px; /* Padding orizzontale e verticale */
+  cursor: pointer; /* Cambia il cursore in una manina per indicare la possibilità di clic */
+  transition: background-color 0.3s, transform 0.2s; /* Transizione fluida per colore di sfondo e trasformazione */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera per profondità */
+}
+
+.button-custom:hover {
+  background-color: #004aad; /* Sfumatura più scura per l'hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra più marcata */
+}
+
+.button-custom:active {
+  background-color: #003887; /* Colore ancora più scuro per il click */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Riduzione dell'ombra per effetto di pressione */
+  transform: translateY(2px); /* Sposta leggermente il bottone verso il basso */
+}
+
+.button-back {
+  margin-top: 20px; /* Distanza dal contenuto sopra */
+  background-color: #6c757d; /* Sfondo grigio per differenziarlo dal bottone principale */
+}
+
+.button-back:hover {
+  background-color: #495057; /* Sfumatura più scura per l'hover del bottone "Indietro" */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra più marcata */
+}
+
+.button-back:active {
+  background-color: #3c434a; /* Colore ancora più scuro per il click del bottone "Indietro" */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Riduzione dell'ombra per effetto di pressione */
+  transform: translateY(2px); /* Sposta leggermente il bottone verso il basso */
+}
+
+.button-container {
+  display: flex; /* Abilita Flexbox */
+  justify-content: center; /* Centra orizzontalmente i figli */
+  margin-top: 20px; /* Distanza dal contenuto sopra, regolabile a seconda delle necessità */
+}

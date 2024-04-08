@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
             'searchGNotice': 'I link puntano alla homepage di GetYourGuide.',
             'searchINotice': 'Questo metodo assegna un fattore di compressione alle immagini basandosi sulla loro dimensione: più grande è l\'immagine, maggiore sarà la compressione applicata per ottimizzare lo spazio di archiviazione.',
             'searchTNotice': 'Sono Link di tracciamento standard e puntano alla Homepage delle varie piattaforme.',
+            'searchT2Notice': 'A differenza di Tradedoubler, abbiamo introdotto una verifica per prevenire errori umani. Guarda il video qui sotto per maggiori dettagli.',
+            'videoDescriptionTitle': `L'ID del programma di Vueling è <span class="highlight">288053</span>, quindi l'URL generata è sbagliata.`,
+            'expectedUrl': `<strong>URL attesa: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">288053</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Fit</span>`,
+            'generatedUrl': `<strong>URL generata: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">17269</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Fit</span>`,
+            'generateDeeplinkButton': 'Genera DeepLink',
+            'backButton': 'Indietro',
             'usefulLinksHeader': 'Deep Link per il Noleggio Auto a Minorca',
             'copyLink': 'Copia link',
             'open': 'Apri',
@@ -37,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'tooltip_searchResultsPage': 'Una pagina dei Risultati di Ricerca mostra un elenco di sistemazioni nella città, nella regione o nella nazione che hai specificato.',
             'tooltip_landingPage': 'Una Landing Page fornisce informazioni sulla città, sulla regione o sul Paese a cui vuoi che i tuoi lettori arrivino tramite link.',
             'activePrograms': 'I Programmi Attivi',
+            'platformLabel': 'Piattaforme',
+            'selectPlatformOption': 'Seleziona una piattaforma',
             'sitesLabel': 'Siti',
             'selectSiteOption': 'Seleziona un sito'
         },
@@ -52,6 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
             'searchGNotice': 'Los enlaces apuntan a la página de inicio de GetYourGuide.',
             'searchINotice': 'Este método asigna un factor de compresión a las imágenes basado en su tamaño: cuanto mayor es la imagen, mayor es la compresión aplicada para optimizar el espacio de almacenamiento.',
             'searchTNotice': 'Son enlaces de seguimiento estándar y apuntan a la página de inicio de las diversas plataformas.',
+            'searchT2Notice': 'A diferencia de Tradedoubler, hemos implementado una verificación para prevenir errores humanos. Mira el video a continuación para más detalles.',
+            'videoDescriptionTitle': `El ID del programa de Vueling es <span class="highlight">288053</span>, por lo que la URL generada es incorrecta.`,
+            'expectedUrl': `<strong>URL esperada: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">288053</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Fes</span>`,
+            'generatedUrl': `<strong>URL generada: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">17269</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Fes</span>`,
+            'generateDeeplinkButton': 'Generar DeepLink',
+            'backButton': 'Atrás',      
             'usefulLinksHeader': 'Deep Link para Alquiler de Coches en Menorca',
             'copyLink': 'Copiar enlace',
             'open': 'Abrir',
@@ -77,6 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'tooltip_searchResultsPage': 'Una página de Resultados de Búsqueda muestra una lista de alojamientos en la ciudad, región o país especificado.',
             'tooltip_landingPage': 'Una Landing Page proporciona información sobre la ciudad, región o país al que quieres que tus lectores lleguen a través de enlaces.',
             'activePrograms': 'Los Programas Activos',
+            'platformLabel': 'Plataformas',
+            'selectPlatformOption': 'Selecciona una plataforma',
             'sitesLabel': 'Sitios',
             'selectSiteOption': 'Selecciona un sitio'
         },
@@ -92,6 +108,12 @@ document.addEventListener('DOMContentLoaded', function() {
             'searchGNotice': 'The links point to GetYourGuide homepage.',
             'searchINotice': 'This method assigns a compression factor to images based on their size: the larger the image, the greater the compression applied to optimize storage space.',
             'searchTNotice': 'They are standard tracking links and point to the homepage of the various platforms.',
+            'searchT2Notice': '"Unlike Tradedoubler, we have implemented a check to prevent human errors. Watch the video below for more details.',
+            'videoDescriptionTitle': `The program ID for Vueling is <span class="highlight">288053</span>, hence the generated URL is incorrect.`,
+            'expectedUrl': `<strong>Expected URL: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">288053</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Fen</span>`,
+            'generatedUrl': `<strong>Generated URL: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">17269</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Fen</span>`,
+            'generateDeeplinkButton': 'Generate DeepLink',
+            'backButton': 'Back',        
             'usefulLinksHeader': 'Deep Links for Car Rental in Minorca',
             'copyLink': 'Copy link',
             'open': 'Open',
@@ -117,6 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'tooltip_searchResultsPage': 'A Search Results Page shows a list of accommodations in the specified city, region, or country.',
             'tooltip_landingPage': 'A Landing Page provides information about the city, region, or country you want your readers to reach through links.',
             'activePrograms': 'Active Programs',
+            'platformLabel': 'Platforms',
+            'selectPlatformOption': 'Select a platform',
             'sitesLabel': 'Sites',
             'selectSiteOption': 'Select a site'
         },
@@ -132,6 +156,12 @@ document.addEventListener('DOMContentLoaded', function() {
             'searchGNotice': 'Les liens pointent vers la page d\'accueil de GetYourGuide.',
             'searchINotice': 'Cette méthode attribue un facteur de compression aux images en fonction de leur taille : plus l\'image est grande, plus la compression appliquée est importante pour optimiser l\'espace de stockage.',
             'searchTNotice': 'Ce sont des liens de suivi standard et ils pointent vers la page d\'accueil des différentes plateformes.',
+            'searchT2Notice': 'Contrairement à Tradedoubler, nous avons introduit une vérification pour éviter les erreurs humaines. Regardez la vidéo ci-dessous pour plus de détails.',
+            'videoDescriptionTitle': `L'ID du programme Vueling est <span class="highlight">288053</span>, donc l'URL générée est incorrecte.`,
+            'expectedUrl': `<strong>URL attendue: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">288053</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Ffr</span>`,
+            'generatedUrl': `<strong>URL générée: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">17269</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Ffr</span>`,
+            'generateDeeplinkButton': 'Générer DeepLink',
+            'backButton': 'Retour',           
             'usefulLinksHeader': 'Deep Link pour la Location de Voiture à Minorque',
             'copyLink': 'Copier le lien',
             'open': 'Ouvrir',
@@ -157,6 +187,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'tooltip_searchResultsPage': 'Une page de Résultats de Recherche montre une liste d\'hébergements dans la ville, la région ou le pays spécifié.',
             'tooltip_landingPage': 'Une Landing Page fournit des informations sur la ville, la région, ou le pays que vous souhaitez que vos lecteurs atteignent via des liens.',
             'activePrograms': 'Les Programmes Actifs',
+            'platformLabel': 'Plateformes',
+            'selectPlatformOption': 'Sélectionnez une plateforme',
             'sitesLabel': 'Sites',
             'selectSiteOption': 'Sélectionnez un site'
         }
@@ -187,6 +219,26 @@ document.addEventListener('DOMContentLoaded', function() {
         var selectSiteOption = document.querySelector('#siteSelect option[value="0"]');
         if (selectSiteOption) {
             selectSiteOption.textContent = translations[selectedLanguage]['selectSiteOption'];
+        }
+    
+        var siteSelectLabel = document.querySelector('label[for="siteSelect2"]');
+        if (siteSelectLabel) {
+            siteSelectLabel.textContent = translations[selectedLanguage]['sitesLabel'];
+        }
+    
+        var selectSiteOption = document.querySelector('#siteSelect2 option[value="0"]');
+        if (selectSiteOption) {
+            selectSiteOption.textContent = translations[selectedLanguage]['selectSiteOption'];
+        }
+        
+        var platformSelectLabel = document.querySelector('label[for="platformSelect"]');
+        if (platformSelectLabel) {
+            platformSelectLabel.textContent = translations[selectedLanguage]['platformLabel'];
+        }
+
+        var selectPlatformOption = document.querySelector('#platformSelect option[value=""]');
+        if (selectPlatformOption) {
+            selectPlatformOption.textContent = translations[selectedLanguage]['selectPlatformOption'];
         }
         
         var searchResultsPageLabel = document.querySelector('label[for="searchResultsPage"]');
@@ -246,6 +298,33 @@ document.addEventListener('DOMContentLoaded', function() {
         var searchTNotice = document.getElementById('searchTNotice');
         if (searchTNotice) {
             searchTNotice.querySelector('.nota').textContent = translations[selectedLanguage]['searchTNotice'];
+        }
+
+        var searchT2Notice = document.getElementById('searchT2Notice');
+        if (searchT2Notice) {
+            searchT2Notice.querySelector('.nota').textContent = translations[selectedLanguage]['searchT2Notice'];
+        }
+
+        var videoDescriptionContainer = document.querySelector('.gif-description');
+        if (videoDescriptionContainer) {
+            videoDescriptionContainer.innerHTML = `
+                <h5>${translations[selectedLanguage]['videoDescriptionTitle']}</h5>
+                <p>${translations[selectedLanguage]['expectedUrl']}</p>
+                <p>${translations[selectedLanguage]['generatedUrl']}</p>
+            `;
+        }        
+
+        var generateDeeplinkButtonText = translations[selectedLanguage]['generateDeeplinkButton'];
+        var backButtonText = translations[selectedLanguage]['backButton'];
+    
+        var generateDeeplinkButton = document.getElementById('generateDeeplinkButton');
+        if (generateDeeplinkButton) {
+            generateDeeplinkButton.textContent = generateDeeplinkButtonText;
+        }
+    
+        var backButton = document.getElementById('backButton');
+        if (backButton) {
+            backButton.textContent = backButtonText;
         }
 
         var copyButton = document.getElementById('copyButton');
@@ -312,6 +391,7 @@ document.addEventListener('DOMContentLoaded', function() {
             {selector: '#searchCiNotice .nota', type: 'textContent', translationKey: 'searchCiNotice'},
             {selector: '#searchGNotice .nota', type: 'textContent', translationKey: 'searchGNotice'},
             {selector: '#searchTNotice .nota', type: 'textContent', translationKey: 'searchTNotice'},
+            {selector: '#searchT2Notice .nota', type: 'textContent', translationKey: 'searchT2Notice'},
             {selector: '#copyButton', type: 'textContent', translationKey: 'copyLink'},
             {selector: '#openButton', type: 'textContent', translationKey: 'open'},
             {selector: '#getyourguide_gen', type: 'textContent', translationKey: 'generateDeepLink'},
