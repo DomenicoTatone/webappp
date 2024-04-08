@@ -45,10 +45,13 @@
       </div>
       <div class="form-group">
         <label for="platformSelect">Piattaforme</label>
-        <select id="platformSelect" class="form-control">
-          <option value="">Seleziona una piattaforma</option>
-        </select>
-      </div>
+        <div class="d-flex align-items-center">
+          <select id="platformSelect" class="form-control mr-2">
+            <option value="">Seleziona una piattaforma</option>
+          </select>
+          <button id="openLinkButton">Apri link</button>
+        </div>
+      </div>      
       <input type="text" id="inputTLink" placeholder="Inserisci qui il link da generare" />
       <button id="transformButton">Genera Link</button>
       <div id="transformedLinkContainer">

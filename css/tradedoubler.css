@@ -114,7 +114,7 @@
 }
 
 /* Stili base per i bottoni */
-#transformButton, #copyTransformedLink, #openTransformedLink {
+#transformButton, #copyTransformedLink, #openTransformedLink, #openLinkButton {
   padding: 12px 12px;
   margin: 5px;
   border: 1px solid #ccc;
@@ -122,16 +122,16 @@
   cursor: pointer;
   background-color: #007bff;
   color: white;
-  cursor: pointer;
   transition: background-color 0.3s ease;
+  white-space: nowrap; /* Impedisce al testo di andare a capo */
 }
 
-#transformButton:hover, #copyTransformedLink:hover, #openTransformedLink:hover {
+#transformButton:hover, #copyTransformedLink:hover, #openTransformedLink:hover, #openLinkButton:hover {
   background-color: #0056b3;
 }
 
 /* Miglioramenti generici per i selettori e bottoni */
-#transformButton, #copyTransformedLink, #openTransformedLink {
+#transformButton, #copyTransformedLink, #openTransformedLink, #openLinkButton {
   padding: 8px 12px;
   margin: 5px;
   border: 1px solid #ccc;

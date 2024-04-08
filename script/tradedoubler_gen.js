@@ -285,6 +285,30 @@ document.getElementById('siteSelect2').addEventListener('change', function() {
     }
 });
 
+document.getElementById('openLinkButton').addEventListener('click', function() {
+    var platformSelect = document.getElementById('platformSelect');
+    var selectedOption = platformSelect.options[platformSelect.selectedIndex];
+    
+    // Prendi il valore dall'opzione selezionata, che sarebbe il codice della piattaforma
+    var platformCode = selectedOption.value;
+    
+    if(platformCode) {
+      // Utilizza il codice della piattaforma per ottenere l'URL dal tuo oggetto linkProgrammi
+      var codiceIsola = document.getElementById('siteSelect2').value.split(" - ")[0];
+      var nomeProgramma = selectedOption.text;
+      var urlProgramma = linkProgrammi[codiceIsola][nomeProgramma];
+  
+      if(urlProgramma) {
+        // Apri il link in una nuova scheda del browser
+        window.open(urlProgramma, '_blank');
+      } else {
+        alert('URL non trovato per la piattaforma selezionata.');
+      }
+    } else {
+      mostraMessaggioDiErrore('SelectPlatform'); // "Seleziona una piattaforma"
+    }
+  });  
+
 document.getElementById('copyTransformedLink').addEventListener('click', function() {
     // Prende l'URL dal contenuto dell'elemento che mostra il link trasformato
     var linkDaCopiare = document.getElementById('transformedLink').querySelector('a').href;
