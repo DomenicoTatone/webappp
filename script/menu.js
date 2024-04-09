@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   </nav>
   <div class="flags">
      <div class="segnalazioni-link" style="cursor: pointer;">
-        <i class="fas fa-paper-plane"></i> Segnalazioni &nbsp;<i class="fas fa-lightbulb"></i>
+        <i class="fas fa-paper-plane"></i> Segnalazioni
      </div>
      <span class="flag-icon flag-icon-it" id="flag-it" style="cursor: pointer;"></span>
      <span class="flag-icon flag-icon-es" id="flag-es" style="cursor: pointer;"></span>
