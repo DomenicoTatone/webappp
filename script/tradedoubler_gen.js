@@ -138,7 +138,7 @@ var criteriValidazione = {
         "BeGood - Trattamento di Bellezza da Indossare": ["https://begood.store/"],
         "Columbus Assicurazioni": ["https://www.columbusassicurazioni.it/"],
         "Direct Ferries IT": ["https://www.directferries.it/"],
-        "eDreams": ["https://www.edreams.it/"],
+        "eDreams": ["https://www.edreams.it/", "https://rentacar.edreams.it/", "https://navette.edreams.it", "https://hotels.edreams.it/"],
         "Fedua B2C / Italia": ["https://fedua.com/"],
         "HUMANTE Amore gel lubrificante": ["https://www.humante.com/"],
         "ORBIS Lifestyle": ["https://orbislifestyle.com/"],
@@ -149,7 +149,7 @@ var criteriValidazione = {
     },
     "3220593": { // Isola di Formentera
         "À La Folie": ["https://alafolie.it/"],
-        "eDreams": ["https://www.edreams.it/"],
+        "eDreams": ["https://www.edreams.it/", "https://rentacar.edreams.it/", "https://navette.edreams.it", "https://hotels.edreams.it/"],
         "Vueling IT": ["https://www.vueling.com/", "https://cars.vueling.com", "https://hotel.vueling.com/", "https://activities.vueling.com/", "https://parking.vueling.com/"],
         "Weweed": ["https://prodotti-cannabis.it/"],
     },
@@ -164,7 +164,7 @@ var criteriValidazione = {
     },
     "3337668": { // Isola di Lanzarote
         "Direct Ferries IT": ["https://www.directferries"],
-        "eDreams": ["https://www.edreams.it/"],
+        "eDreams": ["https://www.edreams.it/", "https://rentacar.edreams.it/", "https://navette.edreams.it", "https://hotels.edreams.it/"],
         "Vueling IT": ["https://www.vueling.com/", "https://cars.vueling.com", "https://hotel.vueling.com/", "https://activities.vueling.com/", "https://parking.vueling.com/"],
         "Weweed": ["https://prodotti-cannabis.it/"],
     },

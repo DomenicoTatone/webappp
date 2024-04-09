@@ -113,7 +113,6 @@
   margin-top: 10px;
 }
 
-/* Stili base per i bottoni */
 #transformButton, #copyTransformedLink, #openTransformedLink, #openLinkButton {
   padding: 12px 12px;
   margin: 5px;
@@ -130,7 +129,6 @@
   background-color: #0056b3;
 }
 
-/* Miglioramenti generici per i selettori e bottoni */
 #transformButton, #copyTransformedLink, #openTransformedLink, #openLinkButton {
   padding: 8px 12px;
   margin: 5px;
@@ -139,9 +137,8 @@
   cursor: pointer;
 }
 
-/* Stilizzazione del contenitore del link trasformato */
 #transformedLinkContainer {
-  margin-top: 20px; /* Distanza dal bottone di trasformazione */
+  margin-top: 20px;
 }
 
 #transformedLink {
