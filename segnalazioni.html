@@ -15,83 +15,112 @@
       <script src="script/function.js"></script>
       <script src="script/translator.js"></script>
       <style>
-         form {
-         width: 100%; /* Larghezza del form */
-         }
-         input[type="text"],
-         input[type="email"],
-         textarea {
-         width: calc(100% - 20px); /* Larghezza del campo di input */
-         padding: 10px;
-         margin: 8px 0;
-         border: 1px solid #ccc;
-         border-radius: 4px;
-         box-sizing: border-box;
-         }
-         textarea {
-         resize: none;
-         height: 150px;
-         }
-         input[type="submit"] {
-         background-color: #007bff;
-         color: #ffffff;
-         border: none;
-         border-radius: 4px;
-         padding: 10px 20px;
-         cursor: pointer;
-         font-size: 16px;
-         }
-         input[type="submit"]:hover {
-         background-color: #0056b3;
-         }
-         button[type="submit"] {
-         background-color: #007bff;
-         color: #ffffff;
-         border: none;
-         border-radius: 4px;
-         padding: 12px 24px;
-         cursor: pointer;
-         font-size: 16px;
-         transition: background-color 0.3s ease;
-         }
-         button[type="submit"]:hover {
-         background-color: #0056b3;
-         }
+form {
+   max-width: 500px; /* Larghezza massima del form per dispositivi più grandi */
+   margin: auto;
+   padding: 20px;
+   background: #f9f9f9;
+   border-radius: 8px;
+}
+
+.form-group {
+   margin-bottom: 15px;
+}
+
+label {
+   display: block;
+   margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+   width: 100%;
+   padding: 10px;
+   margin-top: 5px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box; /* Mantiene la larghezza complessiva */
+}
+
+textarea {
+   resize: vertical; /* Consente all'utente di modificare l'altezza */
+   height: 150px;
+}
+
+button[type="submit"] {
+   width: 100%;
+   padding: 10px;
+   background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+   background-color: #0056b3;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+   transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Aggiunge una transizione morbida */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+   border-color: #007bff; /* Cambia il colore del bordo quando l'elemento è in focus */
+   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Aggiunge un leggero ombreggiatura intorno all'elemento in focus */
+   outline: none; /* Rimuove l'outline di default per mantenere il design coeso */
+}
+
+button[type="submit"]:hover {
+   background-color: #0056b3;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Aggiunge un ombreggiatura al pulsante quando si passa sopra con il mouse */
+}
+
       </style>
    </head>
    <body>
       <div id="app">
+            <div>
          <h1>Segnalazioni e Suggerimenti</h1>
          <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
-            <p>
-               <label>Nome:</label><br>
-               <input type="text" name="name" required>
-            </p>
-            <p>
-               <label>Email:</label><br>
-               <input type="email" name="email" required>
-            </p>
-            <p>
-            <label>Piattaforma:</label><br>
-            <select name="platform" style="width: calc(100% - 20px); border-radius: 5px; margin-top: 5px;" required>
-                <option value="booking">Booking</option>
-                <option value="tradedoubler">TradeDoubler</option>
-                <option value="getyourguide">GetYourGuide</option>
-                <option value="civitatis">Civitatis</option>
-                <option value="noleggio_auto">Noleggio Auto</option>
-                <option value="ImgCompr">ImgCompr</option>
-                <option value="other">Altro</option>
-            </select>
-            </p>
-            <p>
-               <label>Messaggio:</label><br>
-               <textarea name="message" required></textarea>
-            </p>
-            <p>
+            <div class="form-group">
+               <label for="name">Nome:</label>
+               <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+               <label for="platform">Piattaforma:</label>
+               <select id="platform" name="platform" required>
+                   <option value="booking">Booking</option>
+                   <option value="tradedoubler">TradeDoubler</option>
+                   <option value="getyourguide">GetYourGuide</option>
+                   <option value="civitatis">Civitatis</option>
+                   <option value="noleggio_auto">Noleggio Auto</option>
+                   <option value="ImgCompr">ImgCompr</option>
+                   <option value="other">Altro</option>
+               </select>
+            </div>
+            <div class="form-group">
+               <label for="message">Messaggio:</label>
+               <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
                <button type="submit">Invia</button>
-            </p>
-         </form>
-      </div>
-   </body>
+            </div>
+         </form>         
+        </div>
+    </div>
+</body>
 </html>
