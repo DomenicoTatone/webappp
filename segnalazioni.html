@@ -21,6 +21,13 @@ form {
    padding: 20px;
    background: #f9f9f9;
    border-radius: 8px;
+   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transizione morbida per ombra e trasformazione */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombra iniziale leggera */
+}
+
+form:hover, form:focus-within {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra più profonda per effetto "sollevamento" */
+   transform: translateY(-2px); /* Sposta leggermente verso l'alto il form */
 }
 
 .form-group {
@@ -58,6 +65,7 @@ button[type="submit"] {
    border-radius: 5px;
    cursor: pointer;
    transition: background-color 0.3s ease;
+   font-size: medium;
 }
 
 button[type="submit"]:hover {
@@ -83,13 +91,20 @@ button[type="submit"]:hover {
    background-color: #0056b3;
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Aggiunge un ombreggiatura al pulsante quando si passa sopra con il mouse */
 }
-
+.fa-lightbulb {
+   color: #007bff; /* Cambia il colore */
+}
+select {
+   font-size: 1rem; /* Aumenta la dimensione del font */
+}
       </style>
    </head>
    <body>
       <div id="app">
             <div>
-         <h1>Segnalazioni e Suggerimenti</h1>
+         <h1>
+            <i class="fas fa-lightbulb"></i> Segnalazioni e Suggerimenti
+         </h1>
          <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <div class="form-group">
