@@ -142,7 +142,7 @@ var criteriValidazione = {
         "Fedua B2C / Italia": ["https://fedua.com/"],
         "HUMANTE Amore gel lubrificante": ["https://www.humante.com/"],
         "ORBIS Lifestyle": ["https://orbislifestyle.com/"],
-        "Viaggisicuri": ["https://www.viaggisicuri.com/"],
+        "Viaggisicuri": ["https://www.viaggisicuri.com/", "https://viaggisicuri.com/"],
         "Vueling IT": ["https://www.vueling.com/", "https://cars.vueling.com", "https://hotel.vueling.com/", "https://activities.vueling.com/", "https://parking.vueling.com/"],
         "Weweed": ["https://prodotti-cannabis.it/"],
         "Yalla Yalla": ["https://www.yallayalla.it/"]
