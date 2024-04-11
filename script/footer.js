@@ -38,31 +38,31 @@ document.addEventListener('DOMContentLoaded', (event) => {
     </div>
   </div>
 </footer> 
-  `;
-  container.insertAdjacentHTML('beforeend', footerHTML);
+`;
+container.insertAdjacentHTML('beforeend', footerHTML);
 
-  let linksModified = false;
-  const toggleButton = document.getElementById('toggleLinkButton');
-  toggleButton.addEventListener('click', function() {
-      const links = document.querySelectorAll('a');
-      if (!linksModified) {
-          links.forEach(link => {
-              if (!link.href.endsWith('/wp-login.php')) {
-                  link.href += '/wp-login.php';
-              }
-          });
-          this.textContent = "Deactivate wp-login for links";
-          this.classList.add('active');
-          linksModified = true;
-      } else {
-          links.forEach(link => {
-              if (link.href.endsWith('/wp-login.php')) {
-                  link.href = link.href.slice(0, -13);
-              }
-          });
-          this.textContent = "Enable wp-login for links";
-          this.classList.remove('active');
-          linksModified = false;
-      }
-  });
+let linksModified = false;
+const toggleButton = document.getElementById('toggleLinkButton');
+toggleButton.addEventListener('click', function() {
+    const links = document.querySelectorAll('.footer-container a'); // Modifica qui per selezionare solo i link nel footer
+    if (!linksModified) {
+        links.forEach(link => {
+            if (!link.href.endsWith('/wp-login.php')) {
+                link.href += '/wp-login.php';
+            }
+        });
+        this.textContent = "Deactivate wp-login for links";
+        this.classList.add('active');
+        linksModified = true;
+    } else {
+        links.forEach(link => {
+            if (link.href.endsWith('/wp-login.php')) {
+                link.href = link.href.slice(0, -13);
+            }
+        });
+        this.textContent = "Enable wp-login for links";
+        this.classList.remove('active');
+        linksModified = false;
+    }
+});
 });
