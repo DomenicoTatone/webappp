@@ -68,6 +68,35 @@
   }
 }
 
+#toggleLinkButton {
+  margin-bottom: 2%;
+  background-color: #007AFD; /* Blu mare */
+  color: white; /* Testo bianco per alto contrasto */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; /* Bordi leggermente arrotondati */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombra sottile per effetto profondità */
+  transition: background-color 0.3s, transform 0.2s; /* Transizione per il colore di sfondo e la trasformazione */
+}
+
+#toggleLinkButton:hover {
+  background-color: #005ccd; /* Blu più scuro al passaggio del mouse */
+  transform: scale(1.05); /* Leggero ingrandimento al passaggio del mouse */
+}
+
+#toggleLinkButton:focus {
+  outline: none; /* Rimuove il contorno di focus per un aspetto più pulito */
+  box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.6); /* Ombra luminosa per evidenziare il bottone quando è focalizzato */
+}
+
+#toggleLinkButton:active {
+  transform: scale(0.95); /* Leggera compressione quando il bottone è premuto */
+  background-color: #003e7e; /* Blu ancora più scuro quando il bottone è premuto */
+}
+
+
 html, body {
   height: 100%;
   margin: 0;

@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
    const footerHTML = `
    <footer class="site-footer">
+   <button id="toggleLinkButton" class="btn-toggle">wp-login.php</button>
    <div class="footer-container">
      <div class="footer-column">
        <a href="https://www.isoladiminorca.com/" target="_blank">Isola di Minorca</a>
@@ -38,6 +39,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
    </div>
  </footer> 
    `;
-   document.querySelector('#container').insertAdjacentHTML('beforeend', footerHTML);
- });
- 
+   container.insertAdjacentHTML('beforeend', footerHTML);
+
+   let linksModified = false;
+   const toggleButton = document.getElementById('toggleLinkButton');
+   toggleButton.addEventListener('click', function() {
+       const links = document.querySelectorAll('a');
+       if (!linksModified) {
+           links.forEach(function(link) {
+               if (!link.href.endsWith('/wp-login.php')) {
+                   link.href += '/wp-login.php';
+               }
+           });
+           this.textContent = "homepage";
+           this.classList.add('active');
+           linksModified = true;
+       } else {
+           links.forEach(function(link) {
+               if (link.href.endsWith('/wp-login.php')) {
+                   link.href = link.href.slice(0, -13);
+               }
+           });
+           this.textContent = "wp-login.php";
+           this.classList.remove('active');
+           linksModified = false;
+       }
+   });
+});
