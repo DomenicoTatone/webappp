@@ -27,7 +27,20 @@ body {
   border-radius: 8px; /* Bordi arrotondati */
   padding: 20px; /* Spaziatura interna */
   margin-top: 20px; /* Margine superiore per distanziarla dalle altre sezioni */
+  width: 100%; /* Occupa il 100% della larghezza del suo contenitore parent */
+  max-width: 1200px; /* Imposta una larghezza massima per evitare che il container diventi troppo largo su schermi grandi */
+  box-sizing: border-box; /* Include il padding e il border nel calcolo della larghezza e altezza */
+  margin-right: auto; /* Centra il container orizzontalmente */
+  margin-left: auto; /* Centra il container orizzontalmente */
+}
+
+/* Media query per gestire il layout su schermi molto piccoli */
+@media (max-width: 600px) {
+  #app {
+    padding: 10px; /* Riduce la spaziatura interna per sfruttare meglio lo spazio su schermi piccoli */
   }
+}
+
   #app h1 {
   color: #333; /* Colore del testo per l'intestazione */
   text-align: center; /* Centra l'intestazione */
