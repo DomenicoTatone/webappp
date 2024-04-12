@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
      </div>
   </nav>
   <div class="flags">
-     <div class="segnalazioni-link" style="cursor: pointer;">
-        <i class="fas fa-paper-plane"></i> Segnalazioni
-     </div>
+<div class="segnalazioni-link" id="reportsElementId" style="cursor: pointer;">
+    <i class="fas fa-paper-plane"></i> <span id="reportsText">Segnalazioni</span>
+</div>
      <span class="flag-icon flag-icon-it" id="flag-it" style="cursor: pointer;"></span>
      <span class="flag-icon flag-icon-es" id="flag-es" style="cursor: pointer;"></span>
      <span class="flag-icon flag-icon-gb" id="flag-en" style="cursor: pointer;"></span>

@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'expectedUrl': `<strong>URL attesa: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">288053</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Fit</span>`,
             'generatedUrl': `<strong>URL generata: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">17269</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Fit</span>`,
             'generateDeeplinkButton': 'Genera DeepLink',
+            'reports': 'Segnalazioni',
             'backButton': 'Indietro',
             'usefulLinksHeader': 'Deep Link per il Noleggio Auto a Minorca',
             'copyLink': 'Copia link',
@@ -46,7 +47,15 @@ document.addEventListener('DOMContentLoaded', function() {
             'platformLabel': 'Piattaforme',
             'selectPlatformOption': 'Seleziona una piattaforma',
             'sitesLabel': 'Siti',
-            'selectSiteOption': 'Seleziona un sito'
+            'selectSiteOption': 'Seleziona un sito',
+            'reportsSuggestionsTitle': 'Segnalazioni e Suggerimenti',
+            'nameLabel': 'Nome:',
+            'emailLabel': 'Email:',
+            'platformLabel': 'Piattaforma:',
+            'messageLabel': 'Messaggio:',
+            'sendButton': 'Invia',
+            'otherOption': 'Altro',
+            'noleggio_autoOption': 'Noleggio Auto'
         },
         'es': {
             'dropAreaText': 'Arrastra las imágenes aquí o haz clic para seleccionarlas',
@@ -65,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'expectedUrl': `<strong>URL esperada: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">288053</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Fes</span>`,
             'generatedUrl': `<strong>URL generada: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">17269</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Fes</span>`,
             'generateDeeplinkButton': 'Generar DeepLink',
+            'reports': 'Notificaciones',
             'backButton': 'Atrás',      
             'usefulLinksHeader': 'Deep Link para Alquiler de Coches en Menorca',
             'copyLink': 'Copiar enlace',
@@ -94,7 +104,15 @@ document.addEventListener('DOMContentLoaded', function() {
             'platformLabel': 'Plataformas',
             'selectPlatformOption': 'Selecciona una plataforma',
             'sitesLabel': 'Sitios',
-            'selectSiteOption': 'Selecciona un sitio'
+            'selectSiteOption': 'Selecciona un sitio',
+            'reportsSuggestionsTitle': 'Notificaciones y Sugerencias',
+            'nameLabel': 'Nombre:',
+            'emailLabel': 'Correo electrónico:',
+            'platformLabel': 'Plataforma:',
+            'messageLabel': 'Mensaje:',
+            'sendButton': 'Enviar',
+            'otherOption': 'Otro',
+            'noleggio_autoOption': 'Alquiler de Coches'
         },
         'en': {
             'dropAreaText': 'Drag images here or click to select them',
@@ -113,6 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'expectedUrl': `<strong>Expected URL: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">288053</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Fen</span>`,
             'generatedUrl': `<strong>Generated URL: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">17269</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Fen</span>`,
             'generateDeeplinkButton': 'Generate DeepLink',
+            'reports': 'Reports',
             'backButton': 'Back',        
             'usefulLinksHeader': 'Deep Links for Car Rental in Minorca',
             'copyLink': 'Copy link',
@@ -142,7 +161,15 @@ document.addEventListener('DOMContentLoaded', function() {
             'platformLabel': 'Platforms',
             'selectPlatformOption': 'Select a platform',
             'sitesLabel': 'Sites',
-            'selectSiteOption': 'Select a site'
+            'selectSiteOption': 'Select a site',
+            'reportsSuggestionsTitle': 'Reports and Suggestions',
+            'nameLabel': 'Name:',
+            'emailLabel': 'Email:',
+            'platformLabel': 'Platform:',
+            'messageLabel': 'Message:',
+            'sendButton': 'Send',
+            'otherOption': 'Other',
+            'noleggio_autoOption': 'Car Rental'
         },
         'fr': {
             'dropAreaText': 'Glissez les images ici ou cliquez pour les sélectionner',
@@ -161,6 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'expectedUrl': `<strong>URL attendue: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">288053</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Ffr</span>`,
             'generatedUrl': `<strong>URL générée: </strong><span class="fake-link">https://clk.tradedoubler.com/click?p=<span class="highlight">17269</span>&a=3220593&url=https%3A%2F%2Fwww.vueling.com%2Ffr</span>`,
             'generateDeeplinkButton': 'Générer DeepLink',
+            'reports': 'Signalements',
             'backButton': 'Retour',           
             'usefulLinksHeader': 'Deep Link pour la Location de Voiture à Minorque',
             'copyLink': 'Copier le lien',
@@ -190,15 +218,68 @@ document.addEventListener('DOMContentLoaded', function() {
             'platformLabel': 'Plateformes',
             'selectPlatformOption': 'Sélectionnez une plateforme',
             'sitesLabel': 'Sites',
-            'selectSiteOption': 'Sélectionnez un site'
+            'selectSiteOption': 'Sélectionnez un site',
+            'reportsSuggestionsTitle': 'Signalements et Suggestions',
+            'nameLabel': 'Nom:',
+            'emailLabel': 'Email:',
+            'platformLabel': 'Plateforme:',
+            'messageLabel': 'Message:',
+            'sendButton': 'Envoyer',
+            'otherOption': 'Autre',
+            'noleggio_autoOption': 'Location de Voitures'
         }
     };
 
     function applyTranslations(selectedLanguage) {
+    
+        var reportsSuggestionsTitle = document.querySelector('#app > div > h1');
+        if(reportsSuggestionsTitle) {
+            reportsSuggestionsTitle.innerHTML = `<i class="fas fa-lightbulb"></i> ${translations[selectedLanguage]['reportsSuggestionsTitle']}`;
+        }
+    
+        var nameLabel = document.querySelector('label[for="name"]');
+        if(nameLabel) {
+            nameLabel.textContent = translations[selectedLanguage]['nameLabel'];
+        }
+    
+        var emailLabel = document.querySelector('label[for="email"]');
+        if(emailLabel) {
+            emailLabel.textContent = translations[selectedLanguage]['emailLabel'];
+        }
+    
+        var platformLabel = document.querySelector('label[for="platform"]');
+        if(platformLabel) {
+            platformLabel.textContent = translations[selectedLanguage]['platformLabel'];
+        }
+    
+        var messageLabel = document.querySelector('label[for="message"]');
+        if(messageLabel) {
+            messageLabel.textContent = translations[selectedLanguage]['messageLabel'];
+        }
+    
+        var sendButton = document.querySelector('form[name="contact"] button[type="submit"]');
+        if(sendButton) {
+            sendButton.textContent = translations[selectedLanguage]['sendButton'];
+        }
+
+        var select = document.getElementById('platform');
+        if (select) {
+            Array.from(select.options).forEach(function(option) {
+                var key = option.value + 'Option';
+                if (translations[selectedLanguage][key]) {
+                    option.textContent = translations[selectedLanguage][key];
+                }
+            });
+        }
 
         var dropAreaTextElement = document.querySelector('#drop-area p');
         if (dropAreaTextElement) {
             dropAreaTextElement.textContent = translations[selectedLanguage]['dropAreaText'];
+        }
+
+        var reportsTextElement = document.getElementById('reportsText');
+        if (reportsTextElement) {
+            reportsTextElement.textContent = translations[selectedLanguage]['reports'];
         }
     
         var headerTitleElement = document.querySelector('header h1');

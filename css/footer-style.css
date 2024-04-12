@@ -2,7 +2,6 @@
   background: linear-gradient(to right, #007AFD, #1e90ff, #005ccd); /* Gradiente di blu che ricorda l'acqua del mare */
   color: #fff; /* Testo in bianco per contrasto */
   padding: 40px 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Ombra più marcata per un effetto 3D */
   font-family: 'Roboto', sans-serif; /* Font pulito e contemporaneo */
   position: relative;
   display: flex;
@@ -10,10 +9,7 @@
   align-items: center;
   flex-direction: column;
   border-top: 4px solid #add8e6; /* Aggiunge un accento di colore all'estremità superiore che richiama il cielo o l'acqua chiara */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ombra per il testo, aumenta la leggibilità su sfondi chiari */
 }
-
-
 
 .footer-container {
   display: grid;
