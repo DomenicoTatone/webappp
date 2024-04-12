@@ -23,21 +23,28 @@ body {
   text-align: center;
 }
 #app {
-  background-color: #f0f8ff; /* Colore di sfondo leggero per la sezione */
-  border-radius: 8px; /* Bordi arrotondati */
-  padding: 20px; /* Spaziatura interna */
-  margin-top: 20px; /* Margine superiore per distanziarla dalle altre sezioni */
-  width: 100%; /* Occupa il 100% della larghezza del suo contenitore parent */
-  max-width: 1200px; /* Imposta una larghezza massima per evitare che il container diventi troppo largo su schermi grandi */
-  box-sizing: border-box; /* Include il padding e il border nel calcolo della larghezza e altezza */
-  margin-right: auto; /* Centra il container orizzontalmente */
-  margin-left: auto; /* Centra il container orizzontalmente */
+  background-color: #f0f8ff;
+  background-image: linear-gradient(to right, #f0f8ff, #e0ffff); /* Gradiante leggero da sinistra a destra */
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per un effetto di profondità */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transizioni per ombra e trasformazione */
+}
+
+#app:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombra più pronunciata al passaggio del mouse */
 }
 
 /* Media query per gestire il layout su schermi molto piccoli */
 @media (max-width: 600px) {
   #app {
-    padding: 10px; /* Riduce la spaziatura interna per sfruttare meglio lo spazio su schermi piccoli */
+    padding: 10px;
   }
 }
 
