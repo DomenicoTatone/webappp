@@ -55,7 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
             'messageLabel': 'Messaggio:',
             'sendButton': 'Invia',
             'otherOption': 'Altro',
-            'noleggio_autoOption': 'Noleggio Auto'
+            'noleggio_autoOption': 'Noleggio Auto',
+            'enableButton': 'Attiva wp-login per i link',
+            'disableButton': 'Disattiva wp-login per i link'
         },
         'es': {
             'dropAreaText': 'Arrastra las imágenes aquí o haz clic para seleccionarlas',
@@ -112,7 +114,9 @@ document.addEventListener('DOMContentLoaded', function() {
             'messageLabel': 'Mensaje:',
             'sendButton': 'Enviar',
             'otherOption': 'Otro',
-            'noleggio_autoOption': 'Alquiler de Coches'
+            'noleggio_autoOption': 'Alquiler de Coches',
+            'enableButton': 'Activar wp-login para los enlaces',
+            'disableButton': 'Desactivar wp-login para los enlaces'
         },
         'en': {
             'dropAreaText': 'Drag images here or click to select them',
@@ -169,7 +173,9 @@ document.addEventListener('DOMContentLoaded', function() {
             'messageLabel': 'Message:',
             'sendButton': 'Send',
             'otherOption': 'Other',
-            'noleggio_autoOption': 'Car Rental'
+            'noleggio_autoOption': 'Car Rental',
+            'enableButton': 'Enable wp-login for links',
+            'disableButton': 'Deactivate wp-login for links'
         },
         'fr': {
             'dropAreaText': 'Glissez les images ici ou cliquez pour les sélectionner',
@@ -226,11 +232,31 @@ document.addEventListener('DOMContentLoaded', function() {
             'messageLabel': 'Message:',
             'sendButton': 'Envoyer',
             'otherOption': 'Autre',
-            'noleggio_autoOption': 'Location de Voitures'
+            'noleggio_autoOption': 'Location de Voitures',
+            'enableButton': 'Activer wp-login pour les liens',
+            'disableButton': 'Désactiver wp-login pour les liens'
         }
     };
 
     function applyTranslations(selectedLanguage) {
+
+        const toggleButton = document.getElementById('toggleLinkButton');
+        let linksModified = localStorage.getItem('linksModified') === 'true';
+    
+        // Aggiorna il testo del pulsante in base allo stato e alla lingua
+        toggleButton.textContent = linksModified ? translations[selectedLanguage]['disableButton'] : translations[selectedLanguage]['enableButton'];
+        if (linksModified) {
+            toggleButton.classList.add('active');
+        } else {
+            toggleButton.classList.remove('active');
+        }
+    
+        toggleButton.addEventListener('click', function() {
+            linksModified = !linksModified;
+            localStorage.setItem('linksModified', linksModified);
+            this.textContent = linksModified ? translations[selectedLanguage]['disableButton'] : translations[selectedLanguage]['enableButton'];
+            this.classList.toggle('active', linksModified);
+        });
     
         var reportsSuggestionsTitle = document.querySelector('#app > div > h1');
         if(reportsSuggestionsTitle) {
