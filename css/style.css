@@ -23,19 +23,19 @@ body {
   text-align: center;
 }
 #app {
-  background-color: #f0f8ff;
-  background-image: linear-gradient(to right, #f0f8ff, #e0ffff); /* Gradiante leggero da sinistra a destra */
+  background-color: #f5f9fd;
   border-radius: 8px;
-  padding: 20px;
+  padding: 40px; /* Padding interno aumentato per più spazio */
   margin-top: 20px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1700px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per un effetto di profondità */
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transizioni per ombra e trasformazione */
 }
+
 
 #app:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombra più pronunciata al passaggio del mouse */
