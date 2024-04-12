@@ -39,30 +39,38 @@ document.addEventListener('DOMContentLoaded', (event) => {
   </div>
 </footer> 
 `;
-container.insertAdjacentHTML('beforeend', footerHTML);
+  container.insertAdjacentHTML('beforeend', footerHTML);
 
-let linksModified = false;
-const toggleButton = document.getElementById('toggleLinkButton');
-toggleButton.addEventListener('click', function() {
-    const links = document.querySelectorAll('.footer-container a'); // Modifica qui per selezionare solo i link nel footer
-    if (!linksModified) {
-        links.forEach(link => {
-            if (!link.href.endsWith('/wp-login.php')) {
-                link.href += '/wp-login.php';
-            }
-        });
-        this.textContent = "Deactivate wp-login for links";
-        this.classList.add('active');
-        linksModified = true;
-    } else {
-        links.forEach(link => {
-            if (link.href.endsWith('/wp-login.php')) {
-                link.href = link.href.slice(0, -13);
-            }
-        });
-        this.textContent = "Enable wp-login for links";
-        this.classList.remove('active');
-        linksModified = false;
-    }
-});
+  const toggleButton = document.getElementById('toggleLinkButton');
+  let linksModified = localStorage.getItem('linksModified') === 'true';
+
+  // Imposta il testo e lo stato del pulsante in base allo stato salvato
+  toggleButton.textContent = linksModified ? "Deactivate wp-login for links" : "Enable wp-login for links";
+  if (linksModified) {
+    toggleButton.classList.add('active');
+    updateLinks(true); // Aggiorna i link immediatamente se salvati come modificati
+  }
+
+  toggleButton.addEventListener('click', function() {
+    linksModified = !linksModified;
+    localStorage.setItem('linksModified', linksModified); // Salva lo stato nel localStorage
+    this.textContent = linksModified ? "Deactivate wp-login for links" : "Enable wp-login for links";
+    this.classList.toggle('active', linksModified);
+    updateLinks(linksModified);
+  });
+
+  function updateLinks(activate) {
+    const links = document.querySelectorAll('.footer-container a');
+    links.forEach(link => {
+      if (activate) {
+        if (!link.href.endsWith('/wp-login.php')) {
+            link.href += '/wp-login.php';
+        }
+      } else {
+        if (link.href.endsWith('/wp-login.php')) {
+            link.href = link.href.slice(0, -13);
+        }
+      }
+    });
+  }
 });
