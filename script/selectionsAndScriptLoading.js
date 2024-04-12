@@ -101,9 +101,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.flag-icon').forEach(function(flag) {
         flag.addEventListener('click', function() {
             const selectedLanguage = this.id.split('-')[1];
-            showGenericLandingPages(selectedLanguage); // Aggiornato per passare la lingua selezionata
-            languageSelect.value = selectedLanguage; // Opzionale: aggiorna il selettore di lingua per riflettere la scelta
-            loadScriptBasedOnSelection(); // Ricarica gli script/contenuti se necessario
+            showGenericLandingPages(selectedLanguage);
+            loadScriptBasedOnSelection();
         });
     });
 
