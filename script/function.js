@@ -177,7 +177,7 @@ function mostraProssimoMessaggioDallaCoda() {
 }
 
 function mostraMessaggioSeNecessario(messaggio) {
-    var testoMessaggio = translations[messaggio.selectedLanguage]?.NewProgramActive?.[messaggio.idIsola];
+    //var testoMessaggio = translations[messaggio.selectedLanguage]?.NewProgramActive?.[messaggio.idIsola];
 
     if (!testoMessaggio) {
         console.error("Messaggio non trovato per l'ID specificato:", messaggio.idIsola);
