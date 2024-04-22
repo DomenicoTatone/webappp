@@ -29,6 +29,7 @@ body {
   margin-top: 20px;
   width: 100%;
   max-width: 1200px;
+  min-height: 650px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
