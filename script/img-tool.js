@@ -36,9 +36,15 @@ function handleDrop(e) {
     preventDefaults(e);
     const dt = e.dataTransfer;
     const files = dt.files; // Questo è un oggetto FileList, che è iterabile
+
+    // Aggiungi un feedback visivo per informare gli utenti del caricamento in corso
+    const loadingMessage = document.createElement('div');
+    loadingMessage.textContent = 'Caricamento in corso...';
+    loadingMessage.classList.add('loading-message');
+    dropArea.appendChild(loadingMessage);
+
     handleFiles(files); // Assicurati che questa chiamata passi un oggetto iterabile
 }
-
 
 document.getElementById('image-input').addEventListener('change', function() {
     handleFiles(this.files);
@@ -56,6 +62,8 @@ function getCompressionFactor(sizeBytes) {
     // Definisci dei range di dimensione e i corrispondenti fattori di compressione
     if (sizeMB <= 1) { // Immagini fino a 1 MB
         return 0.60; // Qualità alta perché l'immagine è già di piccole dimensioni
+    } else if (sizeMB <= 3) { // Immagini da 1 a 5 MB
+        return 0.20;
     } else if (sizeMB <= 5) { // Immagini da 1 a 5 MB
         return 0.50;
     } else if (sizeMB <= 10) { // Immagini da 5 a 10 MB
@@ -67,6 +75,12 @@ function getCompressionFactor(sizeBytes) {
 }
 
 function compressAndDisplayImage(file) {
+    // Aggiungi un feedback visivo per informare gli utenti del caricamento in corso
+    const loadingMessage = document.createElement('div');
+    loadingMessage.textContent = 'Caricamento in corso...';
+    loadingMessage.classList.add('loading-message');
+    dropArea.appendChild(loadingMessage);
+
     const originalSizeBytes = file.size;
     const originalSize = originalSizeBytes / 1024 / 1024 > 1 ? 
         (originalSizeBytes / 1024 / 1024).toFixed(2) + ' MB' : 
@@ -108,6 +122,11 @@ function compressAndDisplayImage(file) {
                     compressedImagePreview.src = compressedImageSrc;
                     compressedImagePreview.style.maxWidth = '100px';
                     compressedImagePreview.style.maxHeight = '100px';
+
+                    // Imposta l'attributo 'data-original-name' con il nome originale del file
+                    compressedImagePreview.setAttribute('data-original-name', file.name); // file.name contiene il nome originale del file
+                    
+                    // Aggiungi l'elemento <img> alla card
                     card.appendChild(compressedImagePreview);
 
                     // Percentuale di riduzione
@@ -128,6 +147,11 @@ function compressAndDisplayImage(file) {
                     
                     // Pulsante di download
                     addDownloadButton(card, blob, file.name);
+
+                    // Rimuovi il messaggio di caricamento una volta completato il caricamento delle immagini
+                    if (loadingMessage) {
+                        dropArea.removeChild(loadingMessage);
+                    }
 
                     // Aggiunta della card al container
                     imageContainer.appendChild(card);
@@ -156,23 +180,37 @@ function addDownloadButton(card, blob, fileName) {
 document.getElementById('download-all').addEventListener('click', function() {
     const zip = new JSZip();
     const imgFolder = zip.folder("images");
+    const imgElements = document.querySelectorAll('.card img');
+    const totalImages = imgElements.length;
+    let imagesDownloaded = 0;
 
-    document.querySelectorAll('.card img').forEach((img, index) => {
+    imgElements.forEach((img, index) => {
         const imgURL = img.getAttribute('src');
+        const fileName = img.getAttribute('data-original-name'); // Nome originale del file
+        console.log('Image URL:', imgURL); // Log dell'URL dell'immagine
+        console.log('File Name:', fileName); // Log del nome del file
         fetch(imgURL)
             .then(response => response.blob())
             .then(blob => {
-                imgFolder.file(`image${index}.jpg`, blob, {binary: true});
-                // Controlla se siamo all'ultimo elemento
-                if (index === document.querySelectorAll('.card img').length - 1) {
+                console.log('Blob:', blob); // Log del blob
+                imgFolder.file(fileName, blob, {binary: true});
+                imagesDownloaded++;
+
+                // Controlla se tutte le immagini sono state scaricate
+                if (imagesDownloaded === totalImages) {
+                    // Se sì, genera l'archivio ZIP
                     zip.generateAsync({type:"blob"})
                         .then(function(content) {
                             saveAs(content, "compressed_images.zip");
                         });
                 }
+            })
+            .catch(error => {
+                console.error('Fetch Error:', error); // Log degli errori di fetch
             });
     });
 });
+
 
 function openPhotoSwipe(originalImageSrc, compressedImageSrc, originalSize, compressedSize) {
     var pswpElement = document.querySelectorAll('.pswp')[0];
