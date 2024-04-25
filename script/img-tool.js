@@ -35,15 +35,25 @@ function unhighlight() {
 function handleDrop(e) {
     preventDefaults(e);
     const dt = e.dataTransfer;
-    const files = dt.files; // Questo è un oggetto FileList, che è iterabile
+    const files = dt.files;
 
-    // Aggiungi un feedback visivo per informare gli utenti del caricamento in corso
-    const loadingMessage = document.createElement('div');
-    loadingMessage.textContent = 'Caricamento in corso...';
-    loadingMessage.classList.add('loading-message');
-    dropArea.appendChild(loadingMessage);
+    // Cambia qui per un feedback visivo più moderno
+    const progressBar = document.createElement('div');
+    progressBar.classList.add('progress-bar');
+    const innerBar = document.createElement('div');
+    innerBar.classList.add('progress-bar-inner');
+    progressBar.appendChild(innerBar);
+    dropArea.appendChild(progressBar);
 
-    handleFiles(files); // Assicurati che questa chiamata passi un oggetto iterabile
+    // Simula un progresso
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += 10;
+        innerBar.style.width = progress + '%';
+        if (progress >= 100) clearInterval(interval);
+    }, 200);
+
+    handleFiles(files);
 }
 
 document.getElementById('image-input').addEventListener('change', function() {
@@ -53,6 +63,36 @@ document.getElementById('image-input').addEventListener('change', function() {
 function handleFiles(files) {
     files = files || this.files;
     Array.from(files).forEach(compressAndDisplayImage);
+
+    // Mostra la barra di progresso all'inizio del caricamento
+    showProgressBar();
+}
+
+function showProgressBar() {
+    // Rimuovi vecchi messaggi o barre di progresso
+    const existingProgressBar = document.querySelector('.progress-bar');
+    if (existingProgressBar) {
+        dropArea.removeChild(existingProgressBar);
+    }
+
+    const progressBar = document.createElement('div');
+    progressBar.classList.add('progress-bar');
+    const innerBar = document.createElement('div');
+    innerBar.classList.add('progress-bar-inner');
+    progressBar.appendChild(innerBar);
+    dropArea.appendChild(progressBar);
+
+    // Simula un progresso
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += 10;
+        innerBar.style.width = progress + '%';
+        if (progress >= 100) {
+            clearInterval(interval);
+            // Rimuovi la barra di progresso quando il caricamento è completato
+            dropArea.removeChild(progressBar);
+        }
+    }, 200);
 }
 
 function getCompressionFactor(sizeBytes) {
