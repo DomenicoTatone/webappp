@@ -5,6 +5,9 @@ body {
   margin: 0;
   padding: 0;
 }
+button {
+  font-size: 15px;
+}
 .nota::before {
   margin-bottom: 15px;
   content: "Note:";
@@ -29,7 +32,7 @@ body {
   margin-top: 20px;
   width: 100%;
   max-width: 1200px;
-  min-height: 650px;
+  min-height: 700px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;

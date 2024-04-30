@@ -1,6 +1,7 @@
 const translations = {
     it: {
         DeeplinkCopied: 'Deep Link copiato negli appunti!',
+        linkCopied: 'Link copiato negli appunti!',
         copyError: 'Errore nella copia del link.',
         validGetYourGuideURL: 'Per favore, inserisci un URL valido di GetYourGuide.',
         validCivitatisURL: 'Per favore, inserisci un URL valido di Civitatis.',
@@ -21,6 +22,7 @@ const translations = {
     },
     es: {
         DeeplinkCopied: '¡Deep Link copiado al portapapeles!',
+        linkCopied: 'Link copiado al portapapeles!',
         copyError: 'Error al copiar el enlace.',
         validGetYourGuideURL: 'Por favor, introduce una URL válida de GetYourGuide.',
         validCivitatisURL: 'Por favor, introduce una URL válida de Civitatis.',
@@ -41,6 +43,7 @@ const translations = {
     },
     en: {
         DeeplinkCopied: 'Deep Link copied to clipboard!',
+        linkCopied: 'Link copied to clipboard!',
         copyError: 'Error copying the link.',
         validGetYourGuideURL: 'Please, enter a valid GetYourGuide URL.',
         validCivitatisURL: 'Please, enter a valid Civitatis URL.',
@@ -60,7 +63,8 @@ const translations = {
         }
     },
     fr: {
-        DeeplinkCopied: 'Deep Link copié dans le presse-papiers !',
+        DeeplinkCopied: 'Deep Link copié dans le presse-papiers!',
+        linkCopied: 'Link copié dans le presse-papiers!',
         copyError: 'Erreur lors de la copie du lien.',
         validGetYourGuideURL: 'Veuillez saisir une URL valide de GetYourGuide.',
         validCivitatisURL: 'Veuillez saisir une URL valide de Civitatis.',
